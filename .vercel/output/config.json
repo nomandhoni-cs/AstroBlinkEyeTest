@@ -14,22 +14,6 @@
 		{
 			"src": "^\\/_image$",
 			"dest": "_render"
-		},
-		{
-			"src": "^\\/api\\/activate-license\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/api\\/activatelicense\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/hello\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/$",
-			"dest": "_render"
 		}
 	]
 }

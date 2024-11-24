@@ -6,7 +6,7 @@ import vercel from "@astrojs/vercel/serverless";
 
 dotenv.config(); // Load .env variables
 export default defineConfig({
-  output: "server",
+  output: "hybrid",
   adapter: vercel(),
   integrations: [
     react(),
