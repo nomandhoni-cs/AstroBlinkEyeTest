@@ -1,8 +1,21 @@
 // File: src/pages/api/activate-license.ts
 
 import type { APIRoute } from "astro";
-
-export const post: APIRoute = async ({ request }) => {
+export const GET: APIRoute = async () => {
+  return new Response(
+    JSON.stringify({
+      message: "Hello, World!",
+      timestamp: new Date().toISOString(),
+    }),
+    {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+};
+export const POST: APIRoute = async ({ request }) => {
   try {
     // Parse the JSON body from the incoming request
     const reqData = await request.json();
