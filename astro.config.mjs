@@ -1,17 +1,10 @@
 import { defineConfig } from "astro/config";
+import vercel from "@astrojs/vercel/serverless";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
-import dotenv from "dotenv";
-import vercel from "@astrojs/vercel/serverless";
 
-dotenv.config(); // Load .env variables
 export default defineConfig({
-  output: "hybrid",
+  output: "server",
   adapter: vercel(),
-  integrations: [
-    react(),
-    tailwind({
-      applyBaseStyles: false,
-    }),
-  ],
+  integrations: [react(), tailwind()],
 });
